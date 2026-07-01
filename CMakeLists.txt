@@ -163,7 +163,7 @@ message ("This is a MPI build:" ${MPI_FOUND})
 
 # Enable NVTX ranges on Linux
 if(NOT WIN32)
-  set(NVTXRANGE_FLAG -DNVTX_RANGES)
+  set(NVTXRANGE_FLAG "")  # disabled: CUDA13 NVTX3 incompat, profiling only
 endif()
 
 # Configuration specific nvcc flags
